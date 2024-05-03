@@ -5,9 +5,13 @@ function toCase(text) {
     } else {
         let result = '';
         for (let i = 0; i < text.length; i++) {
+			  if (text[i] === ' ') {
+                result += '-';
+				  } else {
             // Convert each character to lowercase and append '-' followed by its uppercase version
             result += text[i].toLowerCase() + '-' + text[i].toUpperCase();
         }
+		}
         return result;
     }
 }
